@@ -107,8 +107,8 @@ if ($editinstance->showthumb) {
     $table->align = ['center', 'center'];
     $table->size = ['*', '*'];
     $table->data[] = ['<img src="'.$image->get_thumbnail_url().
-                            '" alt="" /><br /><span title="'.$image->get_image_caption().'">'.
-                            $image->get_image_caption().'</span>', $editinstance->output($image->get_image_caption()), ];
+                            '" alt="" /><br /><span title="' . format_string($image->get_image_caption()) . '">' .
+                            format_string($image->get_image_caption()) .'</span>', $editinstance->output($image->get_image_caption()), ];
 } else {
     $table->align = ['center'];
     $table->size = ['*'];
