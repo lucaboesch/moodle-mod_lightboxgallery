@@ -31,8 +31,8 @@ require_once($CFG->dirroot . '/mod/lightboxgallery/backup/moodle2/restore_lightb
  * lightboxgallery restore task that provides all the settings and steps to perform one
  * complete restore of the activity
  */
-class restore_lightboxgallery_activity_task extends restore_activity_task {
-
+class restore_lightboxgallery_activity_task extends restore_activity_task
+{
     /**
      * Define (add) particular settings this activity can have
      */
@@ -68,7 +68,6 @@ class restore_lightboxgallery_activity_task extends restore_activity_task {
         $rules[] = new restore_decode_rule('LIGHTBOXGALLERYINDEX', '/mod/lightboxgallery/index.php?id=$1', 'course');
 
         return $rules;
-
     }
 
     /**

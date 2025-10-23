@@ -40,7 +40,8 @@ namespace mod_lightboxgallery\event;
  * @copyright  Adam Olley <adam.olley@openlms.net>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class image_updated extends \core\event\base {
+class image_updated extends \core\event\base
+{
     /**
      * Init method.
      *

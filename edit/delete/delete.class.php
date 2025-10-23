@@ -21,8 +21,8 @@
  * @copyright 2010 John Kelsh
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class edit_delete extends edit_base {
-
+class edit_delete extends edit_base
+{
     /**
      * Constructor.
      *
@@ -43,9 +43,9 @@ class edit_delete extends edit_base {
      */
     public function output() {
         global $page;
-        $result = get_string('deletecheck', '', $this->image).'<br /><br />';
-        $result .= '<input type="hidden" name="page" value="'.$page.'" />';
-        $result .= '<input type="submit" class="btn btn-secondary" value="'.get_string('yes').'" />';
+        $result = get_string('deletecheck', '', $this->image) . '<br /><br />';
+        $result .= '<input type="hidden" name="page" value="' . $page . '" />';
+        $result .= '<input type="submit" class="btn btn-secondary" value="' . get_string('yes') . '" />';
         return $this->enclose_in_form($result);
     }
 
@@ -59,7 +59,6 @@ class edit_delete extends edit_base {
     public function process_form() {
         global $CFG, $page;
         $this->lbgimage->delete_file();
-        redirect($CFG->wwwroot.'/mod/lightboxgallery/view.php?id='.$this->cm->id.'&page='.$page.'&editing=1');
+        redirect($CFG->wwwroot . '/mod/lightboxgallery/view.php?id=' . $this->cm->id . '&page=' . $page . '&editing=1');
     }
-
 }

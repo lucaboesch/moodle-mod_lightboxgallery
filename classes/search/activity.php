@@ -31,5 +31,6 @@ namespace mod_lightboxgallery\search;
  * @copyright Copyright (c) 2021 Open LMS (https://www.openlms.net)
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class activity extends \core_search\base_activity {
+class activity extends \core_search\base_activity
+{
 }
