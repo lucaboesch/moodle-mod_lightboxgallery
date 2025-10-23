@@ -28,8 +28,6 @@
 
 require_once(__DIR__ . '/../../../../lib/behat/behat_base.php');
 
-use Behat\Behat\Context\Step\Given as Given,
-    Behat\Gherkin\Node\TableNode as TableNode;
 /**
  * Lightboxgallery-related steps definitions.
  *
@@ -38,8 +36,8 @@ use Behat\Behat\Context\Step\Given as Given,
  * @copyright  Copyright (c) 2021 Open LMS (https://www.openlms.net)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class behat_mod_lightboxgallery extends behat_base {
-
+class behat_mod_lightboxgallery extends behat_base
+{
     /**
      * Allow a gallery to be viewed just by knowing its idnumber.
      * This is a helper function to jump to a gallery without going throught
@@ -61,5 +59,4 @@ class behat_mod_lightboxgallery extends behat_base {
         $href = new moodle_url('/mod/lightboxgallery/view.php', ['id' => $cm->id]);
         $this->getSession()->visit($href->out());
     }
-
 }

@@ -37,7 +37,8 @@ require_once($CFG->dirroot . '/mod/lightboxgallery/locallib.php');
  * @copyright  Copyright (c) 2021 Open LMS (https://www.openlms.net)
  * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License
  */
-final class lib_test extends \advanced_testcase {
+final class lib_test extends \advanced_testcase
+{
     /**
      * Test lightboxgallery_get_edit_types.
      *
