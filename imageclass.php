@@ -465,7 +465,15 @@ class lightboxgallery_image {
             $caption = ''; // Hide by cleaning the content (looks better than cleaning the whole div).
         }
         $posclass = ($this->gallery->captionpos == LIGHTBOXGALLERY_POS_TOP) ? 'top' : 'bottom';
-        $captiondiv = html_writer::tag('div', $caption, ['class' => "lightbox-gallery-image-caption $posclass"]);
+        $captiondiv = html_writer::tag(
+            'div',
+            format_string(
+                $caption,
+                false,
+                ['context' => $this->context->id],
+            ),
+            ['class' => "lightbox-gallery-image-caption $posclass"],
+        );
 
         $html = '<div class="lightbox-gallery-image-container">' .
                     '<div class="lightbox-gallery-image-wrapper">' .
